@@ -1,0 +1,284 @@
+@import "../../../mixins.scss";
+@import url('https://fonts.googleapis.com/css?family=Sofia&effect=fire');
+
+
+.detailsBanner {
+    width: 100%;
+    background-color: var(--black);
+    padding-top: 100px;
+    margin-bottom: 50px;
+    font-family: "Sofia, sans-serif";
+    @include md {
+        margin-bottom: 0;
+        padding-top: 120px;
+        min-height: 700px;
+        font-family: "Sofia, sans-serif";
+    }
+    .backdrop-img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.1;
+        overflow: hidden;
+        .lazy-load-image-background {
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+    .opacity-layer {
+        width: 100%;
+        height: 250px;
+        background: linear-gradient(
+            180deg,
+            rgba(4, 21, 45, 0) 0%,
+            #04152d 79.17%
+        );
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .content {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        font-family: "Sofia, sans-serif";
+        gap: 25px;
+        @include md {
+            gap: 50px;
+            flex-direction: row;
+        }
+        .left {
+            flex-shrink: 0;
+            .posterImg {
+                width: 100%;
+                display: block;
+                border-radius: 12px;
+                @include md {
+                    max-width: 350px;
+                }
+            }
+        }
+        .right {
+            font-family: "Sofia, sans-serif";
+            color: white;
+            .title {
+                font-size: 28px;
+                line-height: 40px;
+                font-family: "Sofia, sans-serif";
+                @include md {
+                    font-size: 34px;
+                    line-height: 44px;
+                    font-family: "Sofia, sans-serif";
+                }
+            }
+            .subtitle {
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: 15px;
+                font-style: italic;
+                font-family: "Sofia, sans-serif";
+                opacity: 0.5;
+                @include md {
+                    font-size: 20px;
+                    line-height: 28px;
+                    font-family: "Sofia, sans-serif";
+                }
+
+                .pricealign{
+                    align-items: flex-start;
+                    font-family: "Sofia, sans-serif";
+                }
+            }
+            .genres {
+                margin-bottom: 25px;
+                flex-flow: row wrap;
+            }
+            .overview {
+                font-family: "Sofia, sans-serif";
+                margin-bottom: 25px;
+                .heading {
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                }
+                .description {
+                    line-height: 24px;
+                    font-family: "Sofia, sans-serif";
+                    @include md {
+                        padding-right: 100px;
+                        font-family: "Sofia, sans-serif";
+                    }
+                }
+            }
+            .circleRating {
+                max-width: 70px;
+                background-color: var(--black2);
+                @include md {
+                    max-width: 90px;
+                }
+                .CircularProgressbar-text {
+                    fill: white;
+                }
+            }
+            .playbtn {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                cursor: pointer;
+                font-family: "Sofia, sans-serif";
+                svg {
+                    width: 60px;
+                    @include md {
+                        width: 80px;
+                    }
+                }
+                .text {
+                    font-size: 20px;
+                    transition: all 0.7s ease-in-out;
+                    font-family: "Sofia, sans-serif";
+                }
+                .triangle {
+                    stroke-dasharray: 240;
+                    stroke-dashoffset: 480;
+                    stroke: white;
+                    transform: translateY(0);
+                    transition: all 0.7s ease-in-out;
+                }
+                .circle {
+                    stroke: white;
+                    stroke-dasharray: 650;
+                    stroke-dashoffset: 1300;
+                    transition: all 0.5s ease-in-out;
+                }
+                &:hover {
+                    .text {
+                        color: var(--pink);
+                        font-family: "Sofia, sans-serif";
+                    }
+                    .triangle {
+                        stroke-dashoffset: 0;
+                        opacity: 1;
+                        stroke: var(--pink);
+                        animation: trailorPlay 0.7s ease-in-out;
+                    }
+                    .circle {
+                        stroke-dashoffset: 0;
+                        stroke: var(--pink);
+                    }
+                }
+            }
+            .row {
+                display: flex;
+                align-items: center;
+                gap: 25px;
+                margin-bottom: 25px;
+                font-family: "Sofia, sans-serif";
+            }
+            .info {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                padding: 15px 0;
+                display: flex;
+                font-family: "Sofia, sans-serif";
+            
+                .infoItem {
+                    margin-right: 10px;
+                    display: flex;
+                    flex-flow: row wrap;
+                    font-family: "Sofia, sans-serif";
+                }
+                .text {
+                    margin-right: 10px;
+                    opacity: 0.5;
+                    line-height: 24px;
+                    font-family: "Sofia, sans-serif";
+                    &.bold {
+                        font-weight: 600;
+                        opacity: 1;
+                    }
+                }
+                .socialIcons {
+                    display: flex;
+                    gap: 15px; /* Adds space between icons */
+                    justify-content: center; /* Aligns icons to the center */
+                    margin-top: 1px; /* Adds some space above the icons */
+                }
+                
+                .socialIcon {
+                    font-size: 35px; /* Increases the size of the icons */
+                    transition: transform 0.3s ease, opacity 0.3s ease; /* Adds transition for hover effect */
+                    color: #fff; /* Default color */
+                }
+                
+                .socialIcon:hover {
+                    transform: scale(1.1); /* Slightly increases size on hover */
+                    opacity: 0.8; /* Makes the icon a bit transparent on hover */
+                }
+                
+                .fb {
+                    color: #3b5998; /* Facebook color */
+                }
+                
+                .ig {
+                    color: #e4405f; /* Instagram color */
+                }
+                
+                .tw {
+                    color: #1da1f2; /* Twitter color */
+                }
+                
+            }
+            
+        }
+    }
+
+    .detailsBannerSkeleton {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        gap: 25px;
+        @include md {
+            gap: 50px;
+            flex-direction: row;
+            font-family: "Sofia, sans-serif";
+        }
+        .contentWrapper {
+            display: flex;
+            gap: 50px;
+        }
+        .left {
+            flex-shrink: 0;
+            width: 100%;
+            display: block;
+            border-radius: 12px;
+            aspect-ratio: 1/1.5;
+            @include md {
+                max-width: 350px;
+            }
+        }
+        .right {
+            width: 100%;
+            .row {
+                width: 100%;
+                height: 25px;
+                margin-bottom: 20px;
+                border-radius: 50px;
+                &:nth-child(2) {
+                    width: 75%;
+                    margin-bottom: 50px;
+                }
+                &:nth-child(5) {
+                    width: 50%;
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+}

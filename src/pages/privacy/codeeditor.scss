@@ -1,0 +1,191 @@
+// codeeditor.scss
+
+$bg-color: #161b22;
+$border-color: #30363d;
+$header-bg-color: #0d1117;
+$font-color: #7d8590;
+$highlight-color: #FF7F50;
+
+.tab {
+    background-color: $bg-color;
+    border-radius: 0.75rem; // rounded-xl equivalent
+    overflow: hidden;
+    border: 0.5px solid $border-color;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); // shadow-2xl equivalent
+}
+
+.border-b {
+    border-bottom: 0.5px solid $border-color;
+}
+
+.px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.text-gray-300 {
+    color: #d1d5db; // Tailwind gray-300 equivalent
+}
+
+.text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bg-gradient {
+    background: linear-gradient(to right, $highlight-color, lighten($highlight-color, 0.2));
+}
+
+.rounded-md {
+    border-radius: 0.375rem; // md equivalent
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.hidden {
+    display: none;
+}
+
+.border-r {
+    border-right: 0.5px solid $border-color;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.rounded-t-md {
+    border-top-left-radius: 0.375rem; // md equivalent
+    border-top-right-radius: 0.375rem; // md equivalent
+}
+
+.max-md\:hidden {
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.max-md\:block {
+    @media (max-width: 768px) {
+        display: block;
+    }
+}
+
+.min-w-0 {
+    min-width: 0;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.w-auto {
+    width: auto;
+}
+
+
+.text-xl {
+    font-size: 1.25rem; // xl equivalent
+}
+
+.text-2xl {
+    font-size: 1.5rem; // 2xl equivalent
+}
+
+.text-3xl {
+    font-size: 1.875rem; // 3xl equivalent
+}
+
+.text-5xl {
+    font-size: 3rem; // 5xl equivalent
+}
+
+.text-6xl {
+    font-size: 3.75rem; // 6xl equivalent
+}
+
+.font-medium {
+    font-weight: 500; // medium equivalent
+}
+
+.font-semibold {
+    font-weight: 600; // semibold equivalent
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0;
+}
+
+.whitespace-nowrap {
+    white-space: nowrap;
+}
+
+.hover\:bg-gray-200:hover {
+    background-color: #e5e7eb; // hover background color for interaction
+}
+
+// SVG styling
+.octicon {
+    fill: $font-color;
+}
+
+.octicon-chevron-left,
+.octicon-chevron-right {
+    cursor: pointer; // make arrows clickable
+}
+
+.octicon-sync {
+    cursor: pointer; // make sync icon clickable
+}
+
+.octicon-plus {
+    cursor: pointer; // make plus icon clickable
+}
+

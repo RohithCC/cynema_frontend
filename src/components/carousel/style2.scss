@@ -1,0 +1,326 @@
+@import "../../mixins.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sofia&effect=fire');
+
+
+
+.carousel2 {
+    position: relative;
+
+    .contentWrapper {
+        position: relative;
+        font-family: "Sofia, sans-serif";
+        padding: 0 15px; /* Add padding for smaller screens */
+    }
+
+    .carouselTitle2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #fff;
+        text-align: center; /* Center title on all devices */
+    }
+
+    .carouselItems2 {
+        display: flex;
+        overflow-y: hidden;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        margin: 0;
+        padding: 0;
+        font-family: "Sofia, sans-serif";
+
+        #courselstem {
+            font-family: "Poppins, sans-serif";
+        }
+
+        .carouselItem2 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            scroll-snap-align: start;
+            position: relative;
+            cursor: pointer;
+            font-family: "Sofia, sans-serif";
+            padding: 0 5px; /* Add spacing between items */
+
+            .carouselPosterBlock2 {
+                position: relative;
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                    border-radius: 8px;
+                }
+            }
+
+            .carouselTextBlock2 {
+                margin-top: 8px;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                padding: 10px;
+
+                .test {
+                    display: flex;
+                    justify-content: space-around;
+                    width: 100%;
+
+                    .col-6 {
+                        flex: 1;
+                        max-width: 55%;
+                        margin: 0 1%;
+                    }
+                
+
+                    .overview {
+                        //font-size: 1.875rem;
+                        color: #ffffff;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+            
+                        p {
+                            margin: 0;
+                            line-height: 1.5;
+                        }
+            
+                        .client-name {
+                            font-weight: bold;
+                            margin-top: 0.5rem;
+                        }
+                    }
+
+
+
+                }
+
+                .carouselTitle {
+                    font-size: 14px;
+                    color: #fff;
+                    line-height: 1.4;
+                    text-align: left;
+
+                    .videoThumbnail {
+                        margin-bottom: 15px;
+                        position: relative;
+
+                        img {
+                            width: 100%;
+                            display: block;
+                            border-radius: 12px;
+                            transition: all 0.7s ease-in-out;
+                        }
+
+                        svg {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 50px;
+                            height: 50px;
+                        }
+
+                        .triangle {
+                            stroke-dasharray: 240;
+                            stroke-dashoffset: 480;
+                            stroke: white;
+                            transform: translateY(0);
+                            transition: all 0.7s ease-in-out;
+                        }
+
+                        .circle {
+                            stroke: white;
+                            stroke-dasharray: 650;
+                            stroke-dashoffset: 1300;
+                            transition: all 0.5s ease-in-out;
+                        }
+
+                        &:hover {
+                            img {
+                                opacity: 0.5;
+                            }
+
+                            .triangle {
+                                stroke-dashoffset: 0;
+                                opacity: 1;
+                                stroke: var(--pink);
+                                animation: trailorPlay 0.7s ease-in-out;
+                            }
+
+                            .circle {
+                                stroke-dashoffset: 0;
+                                stroke: var(--pink);
+                            }
+                        }
+                    }
+                }
+
+                .carouselDate {
+                    font-size: 18px;
+                    color: #ffffff;
+                    line-height: 1.4;
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        color: #3b3a3a;
+        z-index: 1;
+        cursor: pointer;
+        user-select: none;
+
+        &.carouselLeftNav {
+            left: 10px;
+        }
+
+        &.carouselRightNav {
+            right: 10px;
+        }
+    }
+
+    .loadingSkeleton {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+
+        .skeletonItem {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 10px;
+
+            .posterBlock {
+                width: 100%;
+                height: 400px;
+                background: #ddd;
+            }
+
+            .textBlock {
+                .title,
+                .date {
+                    width: 100%;
+                    height: 20px;
+                    background: #ddd;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+        .carouselTitle2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .carouselTextBlock2 .carouselTitle {
+            font-size: 12px;
+        }
+
+        .carouselDate {
+            font-size: 16px;
+        }
+
+        .arrow {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .carouselTitle2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .carouselTextBlock2 .carouselTitle {
+            font-size: 11px;
+        }
+
+        .carouselDate {
+            font-size: 14px;
+        }
+
+        .arrow {
+            font-size: 1.2rem;
+        }
+    }
+
+
+
+            /* Responsive adjustments */
+            @media (max-width: 768px) {
+
+                .videosSection .videos .videoItem .videoThumbnail .imgyoutube {
+                    width: 300px;
+                }
+
+                .videosSection .videos .videoItem .videoThumbnail {
+                    width: 300px;
+                    max-width: 300px;
+                    padding-top: 70px;
+                    padding-right: 10px;
+                }
+                .carouselTextBlock2 .test .col-6 {
+                    max-width: 100%; /* Take full width on smaller screens */
+                    margin: 0 0 15px 0; /* Margin adjusted for spacing on mobile */
+
+                    
+                }
+
+                .carousel2 .carouselItems2 .carouselItem2 .carouselTextBlock2 .test {
+                    display: flex;
+                    justify-content: space-around;
+                    width: 100%;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: stretch;
+                    align-content: stretch;
+                    padding-top: 10px;
+                }
+
+                .carouselTextBlock2 .overview {
+                  //  font-size: 1.5rem; /* Smaller font size for mobile devices */
+                    display: none;
+                }
+
+                .carouselTextBlock2 .carouselTitle {
+                    text-align: center; /* Center align text on smaller screens */
+                }
+            }
+
+            /* Responsive styles for mobile devices */
+                @media only screen and (max-width: 767px) {
+                                        .carousel2 .carouselItems2 .carouselItem2 .carouselTextBlock2 .test .overview {
+                                            font-size: 1.25rem; /* Adjust font size for smaller screens */
+                                            text-align: center; /* Center text on mobile */
+                                            padding: 10px; /* Add some padding for better readability */
+                                        }
+                                        
+                }
+
+            @media (max-width: 480px) {
+                .carouselTextBlock2 .overview {
+                    font-size: 0.25rem; /* Further reduce font size for very small devices */
+                    display: none;
+                }
+
+                .carouselTextBlock2 .carouselDate {
+                    font-size: 16px; /* Adjust the date font size */
+                }
+            }
+
+}

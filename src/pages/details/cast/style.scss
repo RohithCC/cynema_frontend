@@ -1,0 +1,116 @@
+@import "../../../mixins.scss";
+@import url('https://fonts.googleapis.com/css?family=Sofia&effect=fire');
+
+
+.castSection {
+    position: relative;
+    margin-bottom: 50px;
+    font-family: "Sofia, sans-serif";
+    .sectionHeading {
+        font-size: 24px;
+        color: white;
+        margin-bottom: 25px;
+        font-family: "Sofia, sans-serif";
+    }
+    .listItems {
+        display: flex;
+        gap: 20px;
+        overflow-y: hidden;
+        margin-right: -20px;
+        margin-left: -20px;
+        padding: 0 20px;
+        font-family: "Sofia, sans-serif";
+        @include md {
+            margin: 0;
+            padding: 0;
+            font-family: "Sofia, sans-serif";
+        }
+        .listItem {
+            text-align: center;
+            color: white;
+            font-family: "Sofia, sans-serif";
+            .profileImg {
+                width: 125px;
+                height: 125px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-bottom: 15px;
+                font-family: "Sofia, sans-serif";
+                @include md {
+                    width: 175px;
+                    height: 175px;
+                    margin-bottom: 25px;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center top;
+                    display: block;
+                }
+            }
+            .name {
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 600;
+                font-family: "Sofia, sans-serif";
+                @include md {
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-family: "Sofia, sans-serif";
+                }
+            }
+            .character {
+                font-size: 14px;
+                line-height: 20px;
+                opacity: 0.5;
+                font-family: "Sofia, sans-serif";
+                @include md {
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-family: "Sofia, sans-serif";
+                }
+            }
+        }
+    }
+
+    .castSkeleton {
+        display: flex;
+        gap: 20px;
+        overflow-y: hidden;
+        margin-right: -20px;
+        margin-left: -20px;
+        padding: 0 20px;
+        font-family: "Sofia, sans-serif";
+        @include md {
+            margin: 0;
+            padding: 0;
+            font-family: "Sofia, sans-serif";
+        }
+        .skItem {
+            .circle {
+                width: 125px;
+                height: 125px;
+                border-radius: 50%;
+                margin-bottom: 15px;
+                @include md {
+                    width: 175px;
+                    height: 175px;
+                    margin-bottom: 25px;
+                }
+            }
+            .row {
+                width: 100%;
+                height: 20px;
+                border-radius: 10px;
+                margin-bottom: 10px;
+            }
+            .row2 {
+                width: 75%;
+                height: 20px;
+                border-radius: 10px;
+                margin: 0 auto;
+            }
+        }
+    }
+}

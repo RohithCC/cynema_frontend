@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+.carouselSection {
+    padding: 20px 0;
+    font-family: "Sofia, sans-serif";
+
+    h5 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #ffffff;
+        font-family: 'Comfortaa, sans-serif';
+    }
+    /* General styles for ContentWrapper and tabs */
+.contentWrapper {
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: "Sofia, sans-serif";
+}
+
+.tabs {
+    display: flex;
+    overflow-x: auto; /* Allows horizontal scrolling if tabs overflow */
+    white-space: nowrap; /* Prevents tabs from wrapping to the next line */
+    margin: -5px; /* Adjust margin to account for gaps between tabs */
+    font-family: 'Poppins, sans-serif';
+}
+
+.tab {
+    flex: 0 0 auto; /* Prevents tabs from growing or shrinking */
+    color: #ffffff; /* Text color */
+    margin: 5px; /* Adjust spacing between tabs */
+    padding: 10px; /* Add padding inside tabs */
+    text-align: center; /* Center align text and icons */
+    background: linear-gradient(45deg, #04152d, #0a2e6b); /* Gradient background color */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+    white-space: nowrap; /* Ensures text and icons don’t wrap */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow effect */
+}
+.tab.active {
+    background: var(--gradient);
+    color: #fff; /* Text color for active tab */
+    font-family: "Sofia, sans-serif";
+}
+
+.tab:hover {
+    background-color: #ffffff; /* Background color on hover */
+    color: #04152d;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .tab {
+        font-size: 14px; /* Adjust font size for tablets */
+        padding: 8px; /* Adjust padding for tablets */
+        font-family: "Sofia, sans-serif";
+    }
+}
+
+@media (max-width: 480px) {
+    .tab {
+        font-size: 12px; /* Adjust font size for small mobile devices */
+        padding: 6px; /* Adjust padding for small mobile devices */
+        font-family: "Sofia, sans-serif";
+    }
+}
+
+
+}
+
+// Media queries for responsiveness
+@media (max-width: 1200px) {
+    .carouselSection {
+        .contentWrapper {
+            .tabs {
+                .tab {
+                    font-size: 14px;
+                    margin: 5px;
+                    font-family: "Sofia, sans-serif";
+                }
+
+                .switchTabs {
+                    margin-top: 15px;
+                    font-family: "Sofia, sans-serif";
+                }
+            }
+        }
+        .carouselSection-text{
+            font-size: 12px; /* Slightly smaller font size for medium screens */
+            font-family: "Sofia, sans-serif";
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .carouselSection {
+        .contentWrapper {
+            .tabs {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                font-family: "Sofia, sans-serif";
+
+                .tab {
+                    font-size: 14px;
+                    margin: 5px;
+                    text-align: center;
+                    font-family: "Sofia, sans-serif";
+                }
+
+                .switchTabs {
+                    flex: 1 1 100%;
+                    margin-top: 10px;
+                    order: -1; // Place switch tabs at the top on mobile
+                    font-family: "Sofia, sans-serif";
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .carouselSection {
+        .contentWrapper {
+            .tabs {
+                .tab {
+                    flex: 1 1 100%;  // One item per row
+                    margin: 5px 0;
+                    text-align: center;
+                    font-size: 12px;
+                    font-family: "Sofia, sans-serif";
+                }
+
+                .switchTabs {
+                    margin-top: 5px;
+                    font-family: "Sofia, sans-serif";
+                }
+            }
+        }
+    }
+}

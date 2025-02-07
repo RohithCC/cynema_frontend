@@ -1,0 +1,37 @@
+// codeblock.scss
+
+$background-color: #0d1117; // Background color for the code block
+$text-color: #ffffff; // Text color for code
+$highlight-color: #282c34; // Highlight color for the code background
+$border-color: #30363d; // Border color for code blocks
+
+.code-block {
+    background-color: $background-color;
+    padding: 1rem; // padding around the code block
+    border-radius: 0.5rem; // rounded corners
+    overflow-x: auto; // horizontal scrolling for overflow
+    border: 0.5px solid $border-color; // subtle border
+
+    pre {
+        margin: 0; // remove default margin
+        white-space: pre-wrap; // wrap long lines
+        font-size: 16px; // base font size
+    }
+
+    code {
+        display: block; // each code line as block
+        color: $text-color; // text color
+        background-color: $highlight-color; // background color for code lines
+        padding: 0.25rem; // padding inside code blocks
+        border-radius: 0.25rem; // slight rounding
+        line-height: 1.5; // line height for readability
+        overflow-wrap: break-word; // allow breaks in long words
+    }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+    .code-block {
+        font-size: 14px; // slightly smaller font on smaller screens
+    }
+}

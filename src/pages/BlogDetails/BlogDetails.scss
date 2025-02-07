@@ -1,0 +1,48 @@
+.blogDetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color:  0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    height: 780px;
+}
+
+.blogContent {
+    max-width: 800px; /* Limit width for readability */
+    text-align: center; /* Center align text */
+    background-color:  0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding around content */
+}
+
+.blogTitle {
+    font-size: 2.5rem; /* Larger font size for the title */
+    font-family: 'Arial', sans-serif; /* Font family */
+    font-weight: bold; /* Bold font weight */
+    margin-bottom: 10px; /* Space below the title */
+    color: #fff9f9; /* Dark text color */
+}
+
+.blogAuthor {
+    font-size: 1.2rem; /* Medium font size for author and date */
+    font-family: 'Arial', sans-serif; /* Font family */
+    font-weight: normal; /* Normal font weight */
+    color: #ffffff; /* Lighter text color for author/date */
+    margin-bottom: 20px; /* Space below author/date */
+}
+
+.blogImage {
+    max-width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for the image */
+    margin-bottom: 20px; /* Space below the image */
+}
+
+.blogDescription {
+    font-size: 1rem; /* Regular font size for description */
+    font-family: 'Arial', sans-serif; /* Font family */
+    color: #ffffff; /* Darker gray for the description */
+    line-height: 1.5; /* Better line spacing for readability */
+}

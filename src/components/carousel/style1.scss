@@ -1,0 +1,220 @@
+@import "../../mixins.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sofia&effect=fire');
+
+
+.carousel1 {
+   margin-bottom: 50px;
+   font-family: "Sofia, sans-serif";
+    .contentWrapper {
+        position: relative;
+        font-family: "Sofia, sans-serif";
+    }
+    .carouselItems {
+        display: flex;
+        overflow-y: hidden;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        margin: 0;
+        padding: 0;
+        font-family: "Sofia, sans-serif";
+
+        .carouselItem {
+            flex: 0 0 100%; // Make each item take the full width of the carousel
+            max-width: 100%; // Ensure each item doesn't exceed the width of the container
+            scroll-snap-align: start;
+            position: relative;
+            cursor: pointer;
+            font-family: "Sofia, sans-serif";
+
+            .posterBlock {
+                position: relative;
+                width: 100%;
+                aspect-ratio: 1 / 1.5;
+                background-size: cover;
+                background-position: center;
+                margin-bottom: 30px;
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                padding: 10px;
+                font-family: "Sofia, sans-serif";
+
+                .backdrop-imgcourosel {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0.5;
+                    overflow: hidden;
+                    font-family: "Sofia, sans-serif";
+                    .lazy-load-image-background {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        overflow-x: auto; /* Allows horizontal scrolling if tabs overflow */
+                        white-space: nowrap; /* Prevents tabs from wrapping to the next line */
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                        }
+                    }
+                }
+            }
+                .circleRating {
+                    width: 40px;
+                    height: 40px;
+                    position: relative;
+                    top: 30px;
+                    background-color: white;
+                    flex-shrink: 0;
+                    font-family: "Sofia, sans-serif";
+
+                    @include md {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+
+                .genres {
+                    display: none;
+                    position: relative;
+                    font-family: "Sofia, sans-serif";
+
+                    @include md {
+                        display: flex;
+                        flex-flow: wrap;
+                        justify-content: flex-end;
+                    }
+                }
+            
+
+            .textBlock {
+                color: white;
+                display: flex;
+                flex-direction: column;
+                .title {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    line-height: 24px;
+                    font-family: "Sofia, sans-serif";
+                    @include ellipsis(1);
+                    @include md {
+                        font-size: 20px;
+                        font-family: "Sofia, sans-serif";
+                    }
+                }
+
+                .date {
+                    font-size: 14px;
+                    opacity: 0.5;
+                }
+            }
+
+            
+
+
+
+
+
+
+
+
+        }
+
+        .carouselTextBlock {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center; // Align items to the center horizontally
+            text-align: center; // Center-align text
+            justify-content: center; // Center the content vertically
+            padding: 10px;
+            
+
+            .wrap {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-width: 200px; // Adjust min-width as needed
+                width: 80%;
+                box-sizing: border-box;
+            }
+
+            .carouselTitle {
+                font-size: 18px;
+                margin-bottom: 10px;
+                line-height: 2.0;
+                font-family: "Sofia, sans-serif";
+                @include ellipsis(3); // Ensure text does not overflow and is truncated
+
+                @include md {
+                    font-size: 20px;
+                    font-family: "Sofia, sans-serif";
+                }
+            }
+
+            .carouselDate {
+                font-size: 14px;
+                opacity: 0.8;
+            }
+        }
+
+        
+
+
+    }
+
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        color: #3b3a3a;
+        z-index: 1;
+        cursor: pointer;
+        user-select: none;
+
+        &.carouselLeftNav {
+            left: 10px;
+        }
+
+        &.carouselRightNav {
+            right: 10px;
+        }
+    }
+
+    .loadingSkeleton {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+
+        .skeletonItem {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 10px;
+
+            .posterBlock {
+                width: 100%;
+                height: 400px; // Adjust the height as needed
+                background: #ddd;
+            }
+
+            .textBlock {
+                .title,
+                .date {
+                    width: 100%;
+                    height: 20px; // Adjust the height as needed
+                    background: #ddd;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

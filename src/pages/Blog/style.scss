@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Sofia&effect=fire');
+
+
+.blogList {
+    padding: 20px 0;
+    background-color: #04152d;
+
+    .blogTitle {
+        font-size: 2rem;
+        color: #333;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 30px;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .blogItems {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 0 20px;
+        margin-top: 50px;
+    }
+
+    .blogItem {
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .posterBlock {
+            width: 100%;
+            height: 200px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .textBlock {
+            padding: 15px;
+            text-align: left;
+        
+            .title {
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: #2c3e50;
+                margin-bottom: 8px;
+                line-height: 1.4;
+                font-family: "Poppins", sans-serif;
+            }
+        
+            .author {
+                font-size: 1rem;
+                color: #fa9118;
+                font-weight: 500;
+                margin-bottom: 4px;
+                display: inline-block;
+                font-family: "Roboto", sans-serif;
+            }
+        
+            .date {
+                font-size: 0.875rem;
+                color: #7f8c8d;
+                margin-bottom: 15px;
+                display: inline-block;
+                font-family: "Roboto", sans-serif;
+            }
+        
+            .description {
+                font-size: 1rem;
+                line-height: 1.7;
+                color: #34495e;
+                font-family: "Roboto", sans-serif;
+            }
+        }
+        
+    }
+
+    .loadingSkeleton {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);  // 4 items in a row
+        gap: 20px;  // Spacing between the grid items
+        padding: 20px;  // Padding for better alignment
+    
+        .skeletonItem {
+            width: 100%;  // Ensures the item takes full width of the grid cell
+            .posterBlock {
+                border-radius: 12px;
+                margin-top: 50px;
+                width: 100%;
+                aspect-ratio: 1 / 1.5;
+                margin-bottom: 20px;  // Space between poster and text
+            }
+            .textBlock {
+                display: flex;
+                flex-direction: column;
+                .title {
+                    width: 100%;
+                    height: 20px;
+                    margin-bottom: 10px;
+                    background-color: #ccc;  // Skeleton effect
+                }
+                .date {
+                    width: 75%;
+                    height: 20px;
+                    background-color: #ddd;  // Skeleton effect
+                }
+            }
+        }
+    
+        // For mobile responsiveness: 2 items in a row on smaller screens
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    
+        // For very small screens: 1 item per row
+        @media (max-width: 480px) {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+
+    .loadMoreContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+
+        .loadMoreButton {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #f89321;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: "Poppins", sans-serif;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #f87f2e;
+            }
+        }
+    }
+}

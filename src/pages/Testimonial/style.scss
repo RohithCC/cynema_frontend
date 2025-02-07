@@ -1,0 +1,78 @@
+.testimonialCarousel {
+    position: relative;
+    max-width: 600px; // Set a max width for the carousel
+    margin: 0 auto; // Center the carousel
+    overflow: hidden; // Hide overflow to achieve a sliding effect
+    border-radius: 12px; // Rounded corners for the carousel
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Subtle shadow effect
+
+    .carouselControls {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+        z-index: 1; // Ensure controls are above content
+
+        .arrow {
+            font-size: 30px;
+            color: black;
+            cursor: pointer;
+            opacity: 0.7; // Slightly more visible
+            transition: opacity 0.3s ease;
+            padding: 0 15px; // Add padding for better touch area
+
+            &:hover {
+                opacity: 1; // Full opacity on hover
+            }
+        }
+        
+        .carouselLeftNav {
+            left: 10px; // Adjust position for left arrow
+        }
+
+        .carouselRightNav {
+            right: 10px; // Adjust position for right arrow
+        }
+    }
+
+    .testimonialContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+        transition: opacity 0.5s ease; // Smooth transition for opacity
+        margin-top: 50px;
+        height: 720px;
+
+        img {
+            width: 300px; // Image width
+            height: 300px; // Image height
+            border-radius: 50%; // Circular image
+            margin-bottom: 15px;
+            transition: transform 0.3s ease; // Smooth scaling on hover
+
+            &:hover {
+                transform: scale(1.1); // Scale up on hover
+            }
+        }
+
+        .clientName {
+            font-weight: bold;
+            font-size: 1.2rem; // Larger font for client name
+            margin-top: 10px; // Add space above name
+            color: orange;
+        }
+        .client1 {
+            color: whitesmoke;
+        }
+
+        p {
+            font-size: 1rem; // Standard font size for description
+            line-height: 1.5; // Improved readability
+        }
+    }
+}

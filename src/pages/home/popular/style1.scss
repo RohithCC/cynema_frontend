@@ -1,0 +1,26 @@
+.carouselTitle1 {
+    display: flex;
+    align-items: flex-end;
+    font-size: large; /* Adjusted font size for better readability on mobile */
+    color: aliceblue;
+    align-content: center; /* Center content alignment */
+    width: 100%; /* Full width for better utilization on mobile */
+    flex-direction: row;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: center; /* Center content on mobile */
+    font-family: "Sofia, sans-serif";
+}
+
+#stub {
+    font-family: "Poppins, sans-serif";
+}
+
+/* Media query for small devices (e.g., phones) */
+@media only screen and (max-width: 600px) {
+    .carouselTitle1 {
+        font-size: medium; /* Further reduce font size for small screens */
+        justify-content: flex-start; /* Adjust alignment for better fit */
+        text-align: center; /* Center text on small screens */
+        padding: 10px; /* Add padding for spacing */
+    }
+}

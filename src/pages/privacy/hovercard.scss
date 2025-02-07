@@ -1,0 +1,73 @@
+/* Importing Tailwind utilities */
+@import "../../mixins.scss"; /* If you're using mixins */
+
+/* Wrapper for hover effect, centering card */
+.hover-card-wrapper {
+  @apply relative mb-3 md:mb-8 rounded-xl transition-transform duration-300 ease-in-out;
+
+  /* Center the card using Flexbox */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Full viewport height to center vertically */
+}
+
+/* Hover card main content with border, shadow, and layout */
+.hover-card-content {
+  @apply relative bg-[#161b22] h-auto w-full md:w-3/4 lg:w-1/2 max-w-[600px] border border-[#30363d] rounded-xl shadow-xl flex justify-between;
+
+  position: relative;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+
+  /* Hover effect for interactive transformation */
+  &:hover {
+    transform: scale(1.05) translateY(-10px); /* Slightly scale up and move up on hover */
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.4); /* Add a subtle shadow for depth */
+  }
+
+  /* Optional directional layout */
+  &.left {
+    justify-content: flex-start;
+  }
+
+  &.right {
+    justify-content: flex-end;
+  }
+}
+
+/* Circle background element (initially hidden, becomes visible on hover) */
+.hover-card-background {
+  @apply absolute w-[600px] h-[600px] bottom-[50px] z-[-1] transition-opacity duration-200 ease-in-out;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0.7); /* Start smaller for the scale-in effect */
+
+  /* Dynamic styles handled via inline JS */
+  &.hovered {
+    opacity: 0.9;
+    transform: scale(1); /* Scale up when hovered */
+    transition: transform 0.6s ease-out, opacity 0.4s ease-in-out;
+  }
+}
+
+/* Extra animated effect for hover state */
+.hover-card-wrapper:hover .hover-card-background {
+  animation: pulse-animation 2s infinite;
+}
+
+/* Keyframe for pulsating effect on hover */
+@keyframes pulse-animation {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+/* Animation for a smooth fade-in and scale when hovering the card */
+.hover-card-content:hover .hover-card-background {
+  transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+}

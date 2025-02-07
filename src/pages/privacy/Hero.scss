@@ -1,0 +1,517 @@
+$dark-blue: #1e1e2f; // Dark blue color
+$highlight-color: #FF7F50; // Highlight color
+$white: #ffffff; // White color
+$font-gray: #d1d5db; // Gray font color
+$font-color: #7d8590; // Main font color
+$border-color: #30363d; // Border color
+$header-bg-color: #0d1117; // Header background color
+
+
+
+/* Container for Hero Section */
+.hero-container {
+  display: flex; // Use flexbox
+  justify-content: center; // Center content
+  align-items: center; // Center vertically
+  padding: 20px; // Padding for mobile screens
+  max-width: 1280px; // Max width for larger screens
+  margin: 0 auto; // Center the container
+}
+
+/* Responsive Flex Styles */
+.flex {
+  display: flex; // Flexbox display
+}
+
+.flex-col {
+  flex-direction: column; // Column layout
+}
+
+/* Text Styles */
+.text-white {
+  color: $white; // White text
+}
+
+.text-20 {
+  font-size: 1.25rem; // 20px for mobile
+}
+
+.md\:text-2xl {
+  @media (min-width: 768px) {
+    font-size: 1.5rem; // 2xl for larger screens
+  }
+}
+
+.text-28 {
+  font-size: 1.75rem; // 28px for mobile
+}
+
+.md\:text-40 {
+  @media (min-width: 768px) {
+    font-size: 2.5rem; // 40px for larger screens
+  }
+}
+
+/* Headings */
+.lg\:text-5xl {
+  @media (min-width: 1024px) {
+    font-size: 3rem; // Large font size for larger screens
+  }
+}
+
+/* Animation and Transition */
+.js-build-in-item {
+  transition: opacity 0.5s ease, transform 0.5s ease; // Smooth transitions
+}
+
+.build-in-slideX-left {
+  transform: translateX(-20px); // Start from left
+  opacity: 0; // Hidden at first
+  &.active {
+    transform: translateX(0); // Move to original position
+    opacity: 1; // Fade in
+  }
+}
+
+/* SVG Icon Styling */
+.octicon {
+  width: 24px; // Width of the icon
+  height: 24px; // Height of the icon
+  fill: $font-color; // Fill color for SVG
+}
+
+.octicon-chevron-left,
+.octicon-chevron-right,
+.octicon-sync,
+.octicon-plus {
+  cursor: pointer; // Make icons clickable
+}
+
+/* Glowing Icon Background */
+.glowing-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  filter: blur(20px); // Blur effect
+  z-index: 1; // Ensure it's behind the icon
+}
+
+/* Gradient Line */
+.gradient-line {
+  background: linear-gradient(to bottom, $highlight-color, lighten($highlight-color, 0.2)); // Gradient from highlight color to lighter
+  width: 3px; // Width of the line
+  margin-top: 1.75rem; // Space between the icon and line
+  border-radius: 1.5px; // Round edges
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+  .hero-container {
+    flex-direction: column; // Stack elements vertically
+    padding: 10px; // Reduce padding for smaller screens
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-container {
+    flex-direction: row; // Align elements in a row for larger screens
+    justify-content: flex-start; // Align items to the start
+  }
+}
+
+/* Button Styles */
+.btn {
+  background-color: $highlight-color; // Button background color
+  color: $white; // Button text color
+  padding: 10px 20px; // Button padding
+  border-radius: 8px; // Rounded corners
+  text-decoration: none; // Remove underline
+  transition: background-color 0.3s ease, transform 0.3s ease; // Button transition effects
+}
+
+.btn:hover {
+  background-color: darken($highlight-color, 10%); // Darker shade on hover
+  transform: translateY(-2px); // Lift effect on hover
+}
+
+/* Utility Classes */
+.hidden {
+  display: none; // Hide element
+}
+
+.overflow-hidden {
+  overflow: hidden; // Hide overflow
+}
+
+.relative {
+  position: relative; // Relative positioning
+}
+
+.absolute {
+  position: absolute; // Absolute positioning
+}
+
+.text-ellipsis {
+  white-space: nowrap; // No wrapping
+  overflow: hidden; // Hide overflow
+  text-overflow: ellipsis; // Ellipsis for overflow text
+}
+
+/* Box Shadows */
+.box-shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); // Shadow
+}
+
+
+/* Additional Utility Classes for Flexbox */
+.flex-col {
+    flex-direction: column; // Column layout for mobile
+}
+
+.space-x-0 {
+    & > * {
+        margin-left: 0; // Reset space on smaller screens
+    }
+}
+
+.space-x-10 {
+    & > * {
+        margin-left: 2.5rem; // Space between items on larger screens
+    }
+}
+
+/* Gradient for Animated Line */
+.bg-gradient-to-b {
+    background: linear-gradient(to bottom, $highlight-color, lighten($highlight-color, 0.2)); // Gradient for line
+}
+
+/* Glowing Effect */
+.home-campaign-glowing-icon-glow-1 {
+    filter: blur(4px);
+    background: rgba(126, 231, 135, 0.5); // Adjust to your liking
+    transition: opacity 0.3s ease;
+}
+
+/* Ensure Text is Responsive */
+.text-20 {
+    font-size: 1.25rem; // Adjust based on design
+}
+
+.md\:text-2xl {
+    @media (min-width: 768px) {
+        font-size: 1.5rem; // Adjust for larger screens
+    }
+}
+
+
+// codeeditor.scss
+
+$bg-color: #161b22;
+$border-color: #30363d;
+$header-bg-color: #0d1117;
+$font-color: #7d8590;
+$highlight-color: #FF7F50;
+
+.tab {
+    background-color: $bg-color;
+    border-radius: 0.75rem; // rounded-xl equivalent
+    overflow: hidden;
+    border: 0.5px solid $border-color;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); // shadow-2xl equivalent
+}
+
+.border-b {
+    border-bottom: 0.5px solid $border-color;
+}
+
+.px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.text-gray-300 {
+    color: #d1d5db; // Tailwind gray-300 equivalent
+}
+
+.text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bg-gradient {
+    background: linear-gradient(to right, $highlight-color, lighten($highlight-color, 0.2));
+}
+
+.rounded-md {
+    border-radius: 0.375rem; // md equivalent
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.hidden {
+    display: none;
+}
+
+.border-r {
+    border-right: 0.5px solid $border-color;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.rounded-t-md {
+    border-top-left-radius: 0.375rem; // md equivalent
+    border-top-right-radius: 0.375rem; // md equivalent
+}
+
+.max-md\:hidden {
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.max-md\:block {
+    @media (max-width: 768px) {
+        display: block;
+    }
+}
+
+.min-w-0 {
+    min-width: 0;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.w-auto {
+    width: auto;
+}
+
+
+.text-xl {
+    font-size: 1.25rem; // xl equivalent
+}
+
+.text-2xl {
+    font-size: 1.5rem; // 2xl equivalent
+}
+
+.text-3xl {
+    font-size: 1.875rem; // 3xl equivalent
+}
+
+.text-5xl {
+    font-size: 3rem; // 5xl equivalent
+}
+
+.text-6xl {
+    font-size: 3.75rem; // 6xl equivalent
+}
+
+.font-medium {
+    font-weight: 500; // medium equivalent
+}
+
+.font-semibold {
+    font-weight: 600; // semibold equivalent
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0;
+}
+
+.whitespace-nowrap {
+    white-space: nowrap;
+}
+
+.hover\:bg-gray-200:hover {
+    background-color: #e5e7eb; // hover background color for interaction
+}
+
+// SVG styling
+.octicon {
+    fill: $font-color;
+}
+
+.octicon-chevron-left,
+.octicon-chevron-right {
+    cursor: pointer; // make arrows clickable
+}
+
+.octicon-sync {
+    cursor: pointer; // make sync icon clickable
+}
+
+.octicon-plus {
+    cursor: pointer; // make plus icon clickable
+}
+
+
+
+// codespace.scss
+
+$background-color: #0d1117; // Background color for the overall container
+$text-color: #ffffff; // Text color for general content
+$highlight-color: #e79f7e; // Highlight color for special text
+$border-color: #7d8590; // Border color for div elements
+$box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); // Shadow for images
+
+.codespace {
+  position: relative;
+  padding-left: 1.5rem; // for the left padding
+  background-color: $background-color; // Set background color
+  overflow: hidden; // Hide overflow
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .flex {
+    display: flex;
+    flex-wrap: wrap; // Allow wrapping
+  }
+
+  h2, h3 {
+    color: $text-color; // Text color for headings
+    margin: 0; // Remove default margin
+  }
+
+  h2 {
+    font-size: 2rem; // Default font size for h2
+    @media (max-width: 768px) {
+      font-size: 1.25rem; // Smaller font size on mobile
+    }
+  }
+
+  h3 {
+    color: $highlight-color; // Highlight color for the h3
+    font-size: 3rem; // Default font size for h3
+    @media (max-width: 768px) {
+      font-size: 2rem; // Smaller font size on mobile
+    }
+  }
+
+  a {
+    color: $text-color; // Link color
+    text-decoration: none; // Remove underline
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: lighten($text-color, 10%); // Lighter color on hover
+    }
+  }
+
+  .py-4 {
+    padding-top: 1rem; // Padding top
+    padding-bottom: 1rem; // Padding bottom
+  }
+
+  .rounded-md {
+    border-radius: 0.375rem; // Medium border radius
+  }
+
+  .shadow-2xl {
+    box-shadow: $box-shadow; // Use defined shadow
+  }
+
+  .bg-gradient {
+    background: linear-gradient(to right, $highlight-color, rgba(175, 245, 180, 0.7));
+    -webkit-background-clip: text; // For gradient text
+    -webkit-text-fill-color: transparent; // For gradient text
+  }
+
+  .text-transparent {
+    color: transparent; // Transparent text
+  }
+
+  .relative {
+    position: relative; // Ensure relative positioning
+  }
+
+  .absolute {
+    position: absolute; // Ensure absolute positioning
+  }
+
+  .flex-row {
+    display: flex;
+    flex-direction: row; // Flex direction row
+  }
+
+  .gap-x-5 {
+    gap: 1.25rem; // Space between flex items
+  }
+
+  .increase {
+    transition: height 0.3s ease; // Smooth transition for height changes
+  }
+
+  .overflow-hidden {
+    overflow: hidden; // Hide overflow
+  }
+}
+
+// Media Queries for responsiveness
+@media (max-width: 768px) {
+  .flex-col-reverse {
+    flex-direction: column-reverse; // Change flex direction on small screens
+  }
+}
+
+@media (max-width: 640px) {
+  .lg\:pl-24 {
+    padding-left: 1.5rem; // Adjust padding on smaller screens
+  }
+}

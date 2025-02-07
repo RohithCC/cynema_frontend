@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Sofia&effect=fire');
+
+.faqPage {
+    background-color: #1a202c; /* Dark background */
+    color: #fff; /* White text */
+    padding: 24px;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Ensures the container takes at least the full viewport height */
+    position: relative; /* Allows positioning of the footer at the bottom */
+
+    .faqSection {
+        max-width: 800px;
+        width: 100%;
+    }
+
+    .faqTitle {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 24px;
+        text-align: center;
+        font-family: "Sofia, sans-serif";
+    }
+
+    .faqItem {
+        margin-bottom: 32px;
+        font-family: "Sofia, sans-serif";
+    }
+
+    .faqQuestion {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.25rem;
+        font-weight: bold;
+        padding: 0.5rem 0;
+        transition: color 0.3s;
+        font-family: "Sofia, sans-serif";
+
+        &:hover {
+            background-color: #061f3a;
+        }
+
+        .faqIcon {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+    }
+
+    .faqAnswer {
+        font-size: 1.125rem;
+        font-family: "Sofia, sans-serif";
+        line-height: 1.6;
+    }
+}

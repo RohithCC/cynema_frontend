@@ -1,0 +1,64 @@
+.pageNotFound {
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--black3);// Ensure the background is black to contrast the white text
+
+    .contentWrapper {
+        color: #fff; // White color for the text
+        display: flex;
+        flex-direction: column;
+        padding: 20px; // Add some padding if needed
+        width: 100%; // Make sure it takes the full width
+
+        .bigText {
+            font-size: 50px;
+            font-weight: 700;
+        }
+        .smallText {
+            font-size: 44px;
+        }
+    }
+}
+
+.terms {
+    color: #fff;
+    background-color: #1a202c; /* dark background */
+    padding: 24px;
+
+    &__header {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 16px;
+    }
+
+    &__content {
+        line-height: 1.6;
+        font-size: 1rem;
+        
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 24px;
+            margin-bottom: 8px;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            margin-top: 16px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 40px;
+
+            li {
+                margin-bottom: 8px;
+            }
+        }
+    }
+}

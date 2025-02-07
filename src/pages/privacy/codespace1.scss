@@ -1,0 +1,124 @@
+// codespace.scss
+
+$background-color: #0d1117; // Background color for the overall container
+$text-color: #ffffff; // Text color for general content
+$highlight-color: #FF7F50; // Highlight color for special text
+$border-color: #7d8590; // Border color for div elements
+$box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); // Shadow for images
+
+.codespace {
+  position: relative;
+  padding-left: 1.5rem; // for the left padding
+  background-color: $background-color; // Set background color
+  overflow: hidden; // Hide overflow
+  margin-bottom: 50px;
+
+
+#funded {
+
+  font-family: "Poppins, sans-serif";
+}
+
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .flex {
+    display: flex;
+    flex-wrap: wrap; // Allow wrapping
+  }
+
+  h2, h3 {
+    color: $text-color; // Text color for headings
+    margin: 0; // Remove default margin
+  }
+
+  h2 {
+    font-size: 2rem; // Default font size for h2
+    @media (max-width: 768px) {
+      font-size: 1.25rem; // Smaller font size on mobile
+    }
+  }
+
+  h3 {
+    color: $highlight-color; // Highlight color for the h3
+    font-size: 3rem; // Default font size for h3
+    @media (max-width: 768px) {
+      font-size: 2rem; // Smaller font size on mobile
+    }
+  }
+
+  a {
+    color: $text-color; // Link color
+    text-decoration: none; // Remove underline
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: lighten($text-color, 10%); // Lighter color on hover
+    }
+  }
+
+  .py-4 {
+    padding-top: 1rem; // Padding top
+    padding-bottom: 1rem; // Padding bottom
+  }
+
+  .rounded-md {
+    border-radius: 0.375rem; // Medium border radius
+  }
+
+  .shadow-2xl {
+    box-shadow: $box-shadow; // Use defined shadow
+  }
+
+  .bg-gradient {
+    background: linear-gradient(to right, $highlight-color, rgba(175, 245, 180, 0.7));
+    -webkit-background-clip: text; // For gradient text
+    -webkit-text-fill-color: transparent; // For gradient text
+  }
+
+  .text-transparent {
+    color: transparent; // Transparent text
+  }
+
+  .relative {
+    position: relative; // Ensure relative positioning
+  }
+
+  .absolute {
+    position: absolute; // Ensure absolute positioning
+  }
+
+  .flex-row {
+    display: flex;
+    flex-direction: row; // Flex direction row
+  }
+
+  .gap-x-5 {
+    gap: 1.25rem; // Space between flex items
+  }
+
+  .increase {
+    transition: height 0.3s ease; // Smooth transition for height changes
+  }
+
+  .overflow-hidden {
+    overflow: hidden; // Hide overflow
+  }
+}
+
+// Media Queries for responsiveness
+@media (max-width: 768px) {
+  .flex-col-reverse {
+    flex-direction: column-reverse; // Change flex direction on small screens
+  }
+}
+
+@media (max-width: 640px) {
+  .lg\:pl-24 {
+    padding-left: 1.5rem; // Adjust padding on smaller screens
+  }
+}

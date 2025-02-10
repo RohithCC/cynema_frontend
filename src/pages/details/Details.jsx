@@ -671,7 +671,7 @@ const Details = () => {
         
     ];
 
-    console.log(credits1);
+    //console.log(credits1);
 
    /*const filteredCast = credits1?.cast
     ?.filter(castMember => castMember.position === position && castMember.id !== id)

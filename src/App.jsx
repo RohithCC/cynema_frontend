@@ -75,7 +75,7 @@ function App() {
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/:mediaType/:position/:id" element={<Details />} />
+                <Route path="/movie/:position/:id" element={<Details />} />
                 <Route path="/cart/checkout/:id" element={<Cart />} />
                 <Route path="/search/:query" element={<SearchResult />} />
                 <Route path="/explore/:mediaType" element={<Explore />} />

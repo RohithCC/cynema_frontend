@@ -18,6 +18,7 @@ import Faq from "./pages/Faq/Faq";
 import PrivacyPolicy from "./pages/privacy/PrivacyPolicy";
 import Cart from "./pages/details/Cart";
 import Workingon from "./pages/404/Workingon";
+import ContactUs from "./pages/ContactUs/Contactus";
 import Admin from "./pages/admin/Admin";
 import Blog from "./pages/Blog/Blog";
 import Testimonials from "./pages/Testimonial/Testimonials";
@@ -85,7 +86,7 @@ function App() {
                 {/*<Route path="/privacy" element={<PrivacyPolicy />}/>*/}
                 <Route path="*" element={<PageNotFound />} />
                 <Route path="/login" element={<Workingon />} />
-                <Route path="/signup" element={<Workingon />} />
+                <Route path="/contactus" element={<ContactUs />} />
                 <Route path="/admin" element={<Admin />} />
                 <Route path="/blog" element={<Blog title="Blog" />} />
                 <Route path="/video" element={<Videosection />} />

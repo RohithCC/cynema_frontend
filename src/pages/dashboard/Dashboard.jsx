@@ -1743,17 +1743,7 @@ const Dashboard = ({ category }) => {
                             className="react-select-container sortbyDD"
                             classNamePrefix="react-select"
                         /> */}
-                        <Select
-                              name="sortby"
-                              value={sortby}
-                              options={sortbyData}
-                              onChange={onChange}
-                              isClearable={true}
-                              placeholder="Sort by"
-                              className="react-select-container sortbyDD"
-                              classNamePrefix="react-select"
-                              style={{ display: 'none' }}  // This hides the component
-                          />
+                     
 
 
                           

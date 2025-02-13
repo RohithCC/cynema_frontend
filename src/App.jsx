@@ -26,7 +26,7 @@ import Sign from "./pages/Sign/Sign";
 import BlogDetails from "./pages/BlogDetails/BlogDetails";
 import Dashboard from "./pages/dashboard/Dashboard"; 
 import Videosection from "./pages/Videosection/Videosection";
-
+import Ourteam from "./pages/ourteam/Ourteam";
 
 
 function App() {
@@ -85,7 +85,7 @@ function App() {
                 <Route path="/faq" element={<Faq />}/>
                 {/*<Route path="/privacy" element={<PrivacyPolicy />}/>*/}
                 <Route path="*" element={<PageNotFound />} />
-                <Route path="/login" element={<Workingon />} />
+                <Route path="/ourteam" element={<Ourteam />} />
                 <Route path="/contactus" element={<ContactUs />} />
                 <Route path="/admin" element={<Admin />} />
                 <Route path="/blog" element={<Blog title="Blog" />} />

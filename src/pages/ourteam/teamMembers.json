@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "designation": "CEO",
+        "description": "John is the founder and CEO of our company with over 10 years of experience in the industry.",
+        "photo": "https://res.cloudinary.com/dlkcxiz0l/image/upload/v1720598869/linzz//s5mbdtyweqk1ezejsxyl.jpg",
+        "linkedin": "https://www.linkedin.com/in/johndoe"
+    },
+    {
+        "id": 2,
+        "name": "Jane Smith",
+        "designation": "CTO",
+        "description": "Jane is our Chief Technology Officer, leading the development of innovative solutions.",
+        "photo": "https://res.cloudinary.com/dlkcxiz0l/image/upload/v1720598869/linzz//rishab_shetty_xclwgj.jpg",
+        "linkedin": "https://www.linkedin.com/in/janesmith"
+    },
+    {
+        "id": 3,
+        "name": "Alice Johnson",
+        "designation": "Marketing Head",
+        "description": "Alice oversees all marketing strategies and ensures our brand reaches the right audience.",
+        "photo": "https://res.cloudinary.com/dlkcxiz0l/image/upload/v1720598869/linzz//sudhamurthy_ntrfd6.jpg",
+        "linkedin": "https://www.linkedin.com/in/alicejohnson"
+    },
+    {
+        "id": 4,
+        "name": "Bob Brown",
+        "designation": "Product Manager",
+        "description": "Bob manages our product lifecycle and ensures timely delivery of high-quality products.",
+        "photo": "https://res.cloudinary.com/dlkcxiz0l/image/upload/v1720598869/linzz//sharan_hegde_oql1cn.jpg",
+        "linkedin": "https://www.linkedin.com/in/bobbrown"
+    },
+    {
+        "id": 5,
+        "name": "Charlie Davis",
+        "designation": "UI/UX Designer",
+        "description": "Charlie designs intuitive and user-friendly interfaces for our applications.",
+        "photo": "http://res.cloudinary.com/dlkcxiz0l/image/upload/v1720598869/linzz//iy4fuxmsnsh3izz0beqt.jpg",
+        "linkedin": "https://www.linkedin.com/in/charliedavis"
+    },
+    {
+        "id": 6,
+        "name": "Eva Green",
+        "designation": "Software Engineer",
+        "description": "Eva develops robust and scalable software solutions for our clients.",
+        "photo": "https://res.cloudinary.com/dlkcxiz0l/image/upload/v1720598869/linzz//Rajesh_krishna_ydxcpm.jpg",
+        "linkedin": "https://www.linkedin.com/in/evagreen"
+    }
+]

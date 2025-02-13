@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Sofia&effect=fire');
+
+.ourTeamPage {
+  
+    color: #333;
+    padding: 24px;
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    min-height: 60vh;
+
+    .teamTitle {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 32px;
+        color: #ffffff;
+    }
+
+    .teamContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .teamCard {
+        background: #173d77;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .teamPhoto {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .teamDetails {
+            padding: 16px;
+            text-align: center;
+
+            .teamName {
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-bottom: 8px;
+                color: #ffffff;
+            }
+
+            .teamDesignation {
+                font-size: 1.1rem;
+                color: #ffffff;
+                margin-bottom: 12px;
+            }
+
+            .teamDescription {
+                font-size: 0.95rem;
+                color: #ffffff;
+                margin-bottom: 16px;
+            }
+
+            .linkedinButton {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #0077b5;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 0.9rem;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #005f8a;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .ourTeamPage {
+        padding: 16px;
+        padding-top: 60px;
+    }
+
+    .teamContainer {
+        gap: 16px;
+    }
+
+    .teamCard {
+        width: 100%;
+        max-width: 300px;
+    }
+}

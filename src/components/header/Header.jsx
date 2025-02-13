@@ -121,7 +121,7 @@ const Header = () => {
                         </div>
                         <ul className="submenu">
                             <li className="submenuItem" onClick={() => navigate("/contactus")}>contact us</li>
-                            <li className="submenuItem" onClick={() => navigate("/login")}>Login</li>
+                            <li className="submenuItem" onClick={() => navigate("/ourteam")}>Ourteam</li>
                         </ul>
                     </li>
                     <li className="menuItem searchIcon">

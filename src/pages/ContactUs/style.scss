@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Sofia&effect=fire');
 
+/* General styles for all devices */
 .contactPage {
     background-color: #1a202c;
     color: #fff;
@@ -8,105 +9,137 @@
     display: flex;
     justify-content: center;
     min-height: 60vh;
-
-    .contactContainer {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 1000px;
-        width: 100%;
-        background: #2d3748;
-        padding: 24px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        justify-content: space-between; /* Aligns left and right sections with space between them */
-
-        .contactMap {
-            flex: 1;
-            min-width: 275px;
-            margin-right: 24px;
-            width: 100%; /* Ensures it takes full width on smaller devices */
-        }
-
-        .contactForm {
-            flex: 1;
-            min-width: 300px;
-            display: flex;
-            flex-direction: column;
-            padding: 16px;
-
-            .contactTitle {
-                font-size: 2rem;
-                font-weight: bold;
-                text-align: center;
-                margin-bottom: 16px;
-                font-family: "Sofia", sans-serif;
-            }
-
-            .formGroup {
-                margin-bottom: 16px;
-
-                label {
-                    display: block;
-                    font-size: 1rem;
-                    margin-bottom: 8px;
-                }
-
-                input, textarea {
-                    width: 100%;
-                    padding: 12px;
-                    border: none;
-                    border-radius: 5px;
-                    font-size: 1rem;
-                    background: #fff;
-                    color: #333;
-                }
-
-                textarea {
-                    resize: vertical;
-                    min-height: 100px;
-                }
-            }
-
-            .submitButton {
-                background: #ff7c01;
-                color: #ffffff;
-                padding: 12px;
-                font-size: 1.2rem;
-                border: none;
-                cursor: pointer;
-                border-radius: 5px;
-                text-transform: uppercase;
-                font-weight: bold;
-                transition: background 0.3s ease;
-
-                &:hover,
-                &:focus {
-                    background: #e56c00;
-                }
-            }
-        }
-    }
 }
 
-@media (max-width: 768px) {
-    .contactContainer {
-        flex-direction: column;
-        padding: 16px;
+.contactContainer {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    width: 100%;
+    background: #2d3748;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+}
+
+.contactMap {
+    flex: 1;
+    min-width: 275px;
+    margin-right: 24px;
+    width: 100%;
+}
+
+.contactForm {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.contactForm .contactTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16px;
+    font-family: "Sofia", sans-serif;
+}
+
+.formGroup {
+    margin-bottom: 16px;
+}
+
+.formGroup label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #fff;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.formGroup textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.submitButton {
+    background: #ff7c01;
+    color: #ffffff;
+    padding: 12px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.submitButton:hover,
+.submitButton:focus {
+    background: #e56c00;
+}
+
+/* Media query for Samsung Galaxy S8+ and similar devices */
+@media (min-width: 360px) and (max-width: 740px) and (orientation: portrait) {
+    .contactPage {
+        padding: 20px;
+        padding-top: 80px;
     }
 
-    .contactMap, 
+    .contactContainer {
+        padding: 20px;
+        flex-direction: column; /* Stack map and form vertically */
+    }
+
+    .contactMap,
     .contactForm {
         width: 100%;
         margin-right: 0;
-        margin-bottom: 16px;
+        margin-bottom: 20px;
     }
 
     .contactMap iframe {
-        height: 250px; /* Adjusted for better fit on mobile */
+        height: 300px; /* Adjusted height for better fit on Galaxy S8+ */
+    }
+
+    .contactForm .contactTitle {
+        font-size: 2.2rem; /* Larger font size for better readability */
+    }
+
+    .formGroup label {
+        font-size: 1.1rem; /* Slightly larger label font size */
+    }
+
+    .formGroup input,
+    .formGroup textarea {
+        font-size: 1rem; /* Slightly larger font size for inputs */
+        padding: 14px; /* Increased padding for better touch interaction */
+    }
+
+    .formGroup textarea {
+        min-height: 120px; /* Taller textarea for better usability */
+    }
+
+    .submitButton {
+        font-size: 1.2rem; /* Larger font size for button */
+        padding: 14px; /* Increased padding for button */
     }
 }
 
-@media (max-width: 480px) {
+/* Media query for smaller devices (e.g., iPhone SE) */
+@media (max-width: 359px) {
     .contactPage {
         padding: 16px;
         padding-top: 60px;
@@ -117,17 +150,21 @@
     }
 
     .contactForm .contactTitle {
-        font-size: 1.8rem;
+        font-size: 1.8rem; /* Smaller font size for smaller screens */
     }
 
-    .formGroup input, 
+    .formGroup input,
     .formGroup textarea {
-        font-size: 0.9rem;
-        padding: 10px;
+        font-size: 0.9rem; /* Smaller font size for inputs */
+        padding: 10px; /* Reduced padding for smaller screens */
+    }
+
+    .formGroup textarea {
+        min-height: 80px; /* Shorter textarea for smaller screens */
     }
 
     .submitButton {
-        font-size: 1rem;
-        padding: 10px;
+        font-size: 1rem; /* Smaller font size for button */
+        padding: 10px; /* Reduced padding for button */
     }
 }

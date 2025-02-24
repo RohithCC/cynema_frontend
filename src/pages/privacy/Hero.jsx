@@ -16,18 +16,14 @@ const Hero = () => {
     <div className='max-w-[1280px] mx-auto'>
       <ContentWrapper className="contentWrapper">
         
-        {/* Header Section */}
-      {/* Header Section */}
+      
       <CodeSpace />
   
-        
-        {/* Code Editor and Space */}
-          {/* Copilot Feature Section */}
           <div className='relative z-[1] mt-4' style={{marginTop: "100px"}}>
-            {/* <CodeEditor /> */}
+         
         </div>
 
-           {/* Copilot Feature Section */}
+          
            <div className='relative z-[1] mt-4' style={{marginTop: "100px"}}>
            <CopilotFeature />
          </div>

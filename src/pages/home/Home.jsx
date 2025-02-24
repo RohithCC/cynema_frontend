@@ -12,6 +12,7 @@ import Similar from "../details/carousels/Similar";
 import Recommendation from "../details/carousels/Recommendation";
 import CopilotFeature from '.././privacy/CopilotFeature';
 import Hero from "../privacy/Hero";
+import Projects from "../privacy/Projects";
 
 const Home = () => {
     return (

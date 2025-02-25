@@ -132,13 +132,13 @@ const DetailsBanner = ({ video, crew }) => {
 
                                             {/* Social Media Icons */}
                                           <div className="socialIcons">
-                                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                                                <a href={data.fb_link} target="_blank" rel="noopener noreferrer">
                                                     <FaFacebook className="socialIcon fb" />
                                                 </a>
-                                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                                                <a href={data.insta_link} target="_blank" rel="noopener noreferrer">
                                                     <FaInstagram className="socialIcon ig" />
                                                 </a>
-                                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                                                <a href={data.twitter_link} target="_blank" rel="noopener noreferrer">
                                                     <FaTwitter className="socialIcon tw" />
                                                 </a>
                                             </div>

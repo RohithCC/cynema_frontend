@@ -110,7 +110,9 @@ const Header = () => {
                     </div>
                     <ul className="submenu">
                     <li className="submenuItem" onClick={() => navigate("/blog")}>{/*  <BsPersonCircle />*/}  Blogs</li>
-                    <li className="submenuItem" onClick={() => navigate("/video")}> {/* <GiCardJoker /> */}    Videos</li>
+                    <li className="submenuItem" onClick={() => navigate("/ourteam")}>Ourteam</li>
+                    {/*  <li className="submenuItem" onClick={() => navigate("/video")}>   Videos</li> */}
+                   
                     <li className="submenuItem" onClick={() => navigate("/testimonial")}> {/*  <GiCardJoker /> */}   Testimonial</li>
                   </ul>
                     </li>
@@ -121,7 +123,7 @@ const Header = () => {
                         </div>
                         <ul className="submenu">
                             <li className="submenuItem" onClick={() => navigate("/contactus")}>contact us</li>
-                            <li className="submenuItem" onClick={() => navigate("/ourteam")}>Ourteam</li>
+                          
                         </ul>
                     </li>
                     <li className="menuItem searchIcon">

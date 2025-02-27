@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedin, FaWhatsapp } from "react-icons/fa"; // Import WhatsApp icon
+import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedin, FaWhatsapp, FaYoutube } from "react-icons/fa"; // Import WhatsApp icon
 import { Link } from "react-router-dom";
 import ContentWrapper from "../contentWrapper/ContentWrapper";
 import "./style.scss";
@@ -50,8 +50,8 @@ const Footer = () => {
           <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="icon">
             <FaTwitter className="ic" />
           </a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="icon">
-            <FaLinkedin className="ic" />
+          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="icon">
+            <FaYoutube className="ic" />
           </a>
         </div>
       </ContentWrapper>

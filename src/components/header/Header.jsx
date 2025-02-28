@@ -109,11 +109,13 @@ const Header = () => {
                         About Us
                     </div>
                     <ul className="submenu">
-                    <li className="submenuItem" onClick={() => navigate("/blog")}>{/*  <BsPersonCircle />*/}  Blogs</li>
-                    <li className="submenuItem" onClick={() => navigate("/ourteam")}>Ourteam</li>
+                        {/*          <li className="submenuItem" onClick={() => navigate("/blog")}> Blogs</li> */}
+          
+                    <li className="submenuItem" onClick={() => navigate("/ourteam")}>Our Team</li>
                     {/*  <li className="submenuItem" onClick={() => navigate("/video")}>   Videos</li> */}
                    
-                    <li className="submenuItem" onClick={() => navigate("/testimonial")}> {/*  <GiCardJoker /> */}   Testimonial</li>
+                  
+                       {/*   <li className="submenuItem" onClick={() => navigate("/testimonial")}>  Testimonial</li>*/}
                   </ul>
                     </li>
                     <li className="menuItem">

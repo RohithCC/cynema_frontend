@@ -1,14 +1,6 @@
 [
     {
         "id": 1,
-        "name": "John Doe",
-        "designation": "CEO",
-        "description": "John is the founder and CEO of our company with over 10 years of experience in the industry.",
-        "photo": "https://res.cloudinary.com/dlkcxiz0l/image/upload/v1720598869/linzz//s5mbdtyweqk1ezejsxyl.jpg",
-        "linkedin": "https://www.linkedin.com/in/johndoe"
-    },
-    {
-        "id": 2,
         "name": "Jane Smith",
         "designation": "CTO",
         "description": "Jane is our Chief Technology Officer, leading the development of innovative solutions.",
@@ -16,7 +8,7 @@
         "linkedin": "https://www.linkedin.com/in/janesmith"
     },
     {
-        "id": 3,
+        "id": 2,
         "name": "Alice Johnson",
         "designation": "Marketing Head",
         "description": "Alice oversees all marketing strategies and ensures our brand reaches the right audience.",
@@ -24,7 +16,7 @@
         "linkedin": "https://www.linkedin.com/in/alicejohnson"
     },
     {
-        "id": 4,
+        "id": 3,
         "name": "Bob Brown",
         "designation": "Product Manager",
         "description": "Bob manages our product lifecycle and ensures timely delivery of high-quality products.",
@@ -32,7 +24,7 @@
         "linkedin": "https://www.linkedin.com/in/bobbrown"
     },
     {
-        "id": 5,
+        "id": 4,
         "name": "Charlie Davis",
         "designation": "UI/UX Designer",
         "description": "Charlie designs intuitive and user-friendly interfaces for our applications.",
@@ -40,7 +32,7 @@
         "linkedin": "https://www.linkedin.com/in/charliedavis"
     },
     {
-        "id": 6,
+        "id": 5,
         "name": "Eva Green",
         "designation": "Software Engineer",
         "description": "Eva develops robust and scalable software solutions for our clients.",

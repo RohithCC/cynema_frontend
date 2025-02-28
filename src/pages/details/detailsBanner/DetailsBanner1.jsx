@@ -329,26 +329,20 @@ const DetailsBanner1 = ({ video, crew }) => {
                                             </div>
                                             <div className="col-md-6 col-sm-12">
                                             <div className="form-group">
-                                                <label className="mb-1">Budget<span style={{ color: 'rgb(255, 255, 255)' }}>*</span></label>
-                                                <select
-                                                    className="form-control custom-select"
-                                                    id="ddlModels"
-                                                    name="budget"
-                                                    value={budget}
-                                                    onChange={(e) => setBudget(e.target.value)}
-                                                    required
-                                                    aria-required="true"
-                                                >
-                                                    <option value="" disabled hidden>Select Budget</option>
-                                                    <option value="1 lac - 5 lacs">1 lac - 5 lacs</option>
-                                                    <option value="5 lacs - 10 lacs">5 lacs - 10 lacs</option>
-                                                    <option value="10 lacs - 20 lacs">10 lacs - 20 lacs</option>
-                                                    <option value="20 lacs - 30 lacs">20 lacs - 30 lacs</option>
-                                                    <option value="30 lacs - 50 lacs">30 lacs - 50 lacs</option>
-                                                    <option value="50 lacs - 1 Cr">50 lacs - 1 Cr</option>
-                                                    <option value="1 Cr +">1 Cr +</option>
-                                                </select>
-                                            </div>
+                                                        <label className="mb-1">Budget<span style={{ color: 'rgb(255, 255, 255)' }}>*</span></label>
+                                                        <input
+                                                            type="text"
+                                                            className="form-control"
+                                                            id="budgetInput"
+                                                            name="budget"
+                                                            value={budget}
+                                                            onChange={(e) => setBudget(e.target.value)}
+                                                            required
+                                                            aria-required="true"
+                                                            placeholder="Enter Budget"
+                                                        />
+                                                    </div>
+
                                         </div>
                                         </div>
 
